@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background-color: var(--cor-preta);
+  background-color: transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -30,6 +30,21 @@ header {
   position: fixed;
   width: 100%;
   z-index: 999;
+  transition: height 0.3s cubic-bezier(0.7, 0.3, 0.3, 1);
+}
+
+header.shrink {
+  height: 3rem;
+  background-color: var(--cor-preta);
+}
+
+.header-logo {
+  width: 200px;
+  transition: width 0.3s cubic-bezier(0.7, 0.3, 0.3, 1);
+}
+
+header.shrink .header-logo {
+  width: 120px;
 }
 
 .ul-menu {
@@ -47,6 +62,113 @@ header {
 
 .li-menu a:hover {
   color: var(--cor-laranja);
+}
+
+/* --- MENU MOBILE --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: 12px;
+}
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: var(--cor-branca);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 800px) {
+  header {
+    flex-direction: row;
+    height: 4rem;
+    padding: 0 10px;
+  }
+  .header-logo {
+    width: 130px;
+    min-width: 80px;
+  }
+  .nav-menu {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .ul-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    background: var(--cor-preta);
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 18px #0004;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .ul-menu.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .li-menu {
+    width: 100%;
+  }
+  .li-menu a {
+    padding: 16px 20px;
+    font-size: 1.1em;
+    width: 100%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 801px) {
+  .menu-toggle {
+    display: none !important;
+  }
+  .ul-menu {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+    background: none;
+    box-shadow: none;
+    width: auto;
+  }
+  .li-menu a {
+    padding: 10px 10px;
+    font-size: 1em;
+  }
 }
 
 h1 {
@@ -109,7 +231,7 @@ h1 {
 
 /* PRODUTOS */
 
-#produtos {
+#products {
   width: 100%;
 }
 
@@ -130,7 +252,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent; /* Garantir a compatibilidade geral */
+  color: transparent;
 }
 .slider-wrapper {
   display: flex;
@@ -204,4 +326,113 @@ h1 {
 .slider-dot.active {
   background: var(--cor-laranja);
   opacity: 1;
+}
+
+/* SOBRE */
+
+#about-us {
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  max-width: 100%;
+  padding: 0 3rem;
+}
+
+#about-us img {
+  max-height: 20rem;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.about-content {
+  max-width: 30rem;
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin: 0 0 2rem;
+  background: linear-gradient(90deg, var(--cor-preta), var(--cor-laranja));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-content p {
+  font-size: 1rem;
+}
+
+.about-content button {
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--green-color);
+  color: var(--white-color);
+  text-shadow: 0px 1px 1px rgba(22, 23, 22, 0.5);
+  width: 10rem;
+  transition: 0.3s ease-in-out;
+}
+
+.about-content button:hover {
+  background-color: var(--dark-color);
+  border: 1px solid var(--black-color-);
+  color: var(--white-color);
+  transform: scale(1.05);
+}
+
+.about-content button i {
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 1024px) {
+  #about-us {
+    align-items: unset;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  #about-us img {
+    margin-bottom: -2rem;
+    max-height: 30rem;
+  }
+}
+
+@media (max-width: 870px) {
+  #about-us {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #about-us {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  #about-us img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 465px) {
+  #about-us {
+    padding: 0 2rem;
+  }
+  .about-content h2 {
+    text-align: center;
+  }
 }

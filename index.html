@@ -21,11 +21,16 @@
       />
 
       <nav class="nav-menu">
-        <ul class="ul-menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="ul-menu" id="ulMenu">
           <li class="li-menu"><a href="#home">Home</a></li>
+          <li class="li-menu"><a href="#about-us">Sobre nós</a></li>
           <li class="li-menu"><a href="#produtos">Produtos</a></li>
           <li class="li-menu"><a href="#fale-conosco">Fale Conosco</a></li>
-          <li class="li-menu"><a href="#sobre-nos">Sobre nós</a></li>
         </ul>
       </nav>
     </header>
@@ -35,9 +40,8 @@
         <div class="hero-text-container">
           <h1>Tudo o que sua obra precisa, está aqui!</h1>
           <p>
-            A mais de 20 anos no mercado, oferemos parafusos, soluções de
-            fixação e obras em geral com qualidade comprovada e atendimento
-            especializado.
+            Oferemos parafusos, soluções de fixação e obras em geral com
+            qualidade comprovada e atendimento especializado.
           </p>
 
           <a href="http://wa.me/+5519920009409" target="_blank" class="hero-btn"
@@ -46,7 +50,34 @@
         </div>
       </div>
 
-      <section id="produtos">
+      <section id="about-us">
+        <img
+          src="./assets/img/screws.jpg"
+          alt="Foto de uma caixa de parafusos"
+        />
+
+        <div class="about-content">
+          <h3 class="about-heading">Estamos a mais de 20 anos no mercado!</h3>
+
+          <p>
+            Situada em Porto Ferreira, a Casa dos Parafusos é aquela loja onde
+            você sempre encontra o que precisa: alicates, brocas, parafusos e
+            ferragens de qualidade, além de um atendimento que conhece cada
+            cliente pelo nome.
+          </p>
+          <br />
+
+          <p>
+            Aqui, material bom e preço justo caminham juntos. Pode contar com a
+            gente para ajudar na sua construção, reforma ou aquele ajuste rápido
+            do dia a dia. Estamos prontos para receber você com aquele cuidado
+            de quem faz parte da cidade e da sua história.
+          </p>
+          <br />
+        </div>
+      </section>
+
+      <section id="products">
         <div class="slider-container">
           <div class="slider-title">Nossos Produtos</div>
           <!-- <div style="position: relative"> -->

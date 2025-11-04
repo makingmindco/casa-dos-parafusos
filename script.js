@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let sliderCards = Array.from(document.querySelectorAll(".slider-card"));
   const realSlides = sliderCards.length;
 
-  const cardsPerView = 2; // ALTERE para quantos quer visíveis de cada vez
+  const cardsPerView = 2;
   let index = cardsPerView;
 
   function getCardWidth() {
@@ -17,9 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // CLONE grupos de cards para infinito sem buracos!
   function cloneCardsGroup() {
-    // Clona grupo inicial e final
     for (let i = 0; i < cardsPerView; i++) {
       const firstClone = sliderCards[i].cloneNode(true);
       const lastClone =
@@ -32,7 +30,6 @@ window.addEventListener("DOMContentLoaded", () => {
   cloneCardsGroup();
   sliderCards = Array.from(document.querySelectorAll(".slider-card"));
 
-  // Monta dots (um para cada grupo visível possível)
   const numGroups = Math.ceil(realSlides / cardsPerView);
   sliderDots.innerHTML = "";
 
@@ -60,12 +57,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   sliderWrapper.addEventListener("transitionend", () => {
     if (index < cardsPerView) {
-      // Se pulou para o grupo clone final
-      index = realSlides; // volta para grupo real
+      index = realSlides;
       updateSlider(false);
     } else if (index >= sliderCards.length - cardsPerView) {
-      // Se pulou pro grupo clone inicial
-      index = cardsPerView; // volta para grupo real
+      index = cardsPerView;
       updateSlider(false);
     }
   });
@@ -89,7 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
   prevBtn.onclick = prevSlide;
   nextBtn.onclick = nextSlide;
 
-  // Autoplay
+  // AUTOPLAY
   let interval;
   function startAutoplay() {
     interval = setInterval(nextSlide, 3000);
@@ -100,21 +95,36 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   startAutoplay();
 
-  // Responsivo
   window.addEventListener("resize", () => {
     updateSlider(false);
   });
 
-  // Inicial
   updateSlider(false);
 });
 
-// MENU FIXO
+// MENU DIMINUI AO SCROLLAR
 
-// function rolagemPagina(e) {
-//   e.addEventListener("click", () => {
-//     alert("Clicou!");
-//   });
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  if (window.scrollY > 60) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
 
-//   e.querySelector("header").style.height = "3rem";
-// }
+// MENU MOBILE
+
+const menuToggle = document.getElementById("menuToggle");
+const ulMenu = document.getElementById("ulMenu");
+menuToggle.addEventListener("click", function () {
+  menuToggle.classList.toggle("active");
+  ulMenu.classList.toggle("open");
+});
+
+ulMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    ulMenu.classList.remove("open");
+  });
+});
