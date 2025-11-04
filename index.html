@@ -31,7 +31,7 @@
     </header>
 
     <main>
-      <div class="hero">
+      <div id="hero">
         <div class="hero-text-container">
           <h1>Tudo o que sua obra precisa, está aqui!</h1>
           <p>
@@ -45,6 +45,53 @@
           >
         </div>
       </div>
+
+      <section id="produtos">
+        <div class="slider-container">
+          <div class="slider-title">Nossos Produtos</div>
+          <!-- <div style="position: relative"> -->
+          <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slider-card">
+              <img src="assets/img/parafuso-olhal.jpg" alt="Parafuso Olhal" />
+              <div class="card-title">Parafuso Olhal</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/parafuso.jpg" alt="Porcas" />
+              <div class="card-title">Parafusos</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/barra-roscada.jpg" alt="Barra Roscada" />
+              <div class="card-title">Barra Roscada</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/conforme-desenho.jpg" alt="Conjuntos" />
+              <div class="card-title">Conjuntos</div>
+            </div>
+            <div class="slider-card">
+              <img
+                src="assets/img/parafusos-especiais.jpg"
+                alt="Parafusos Especiais"
+              />
+              <div class="card-title">Parafusos Especiais</div>
+            </div>
+            <div class="slider-card">
+              <img
+                src="assets/img/sextavados-e-fendados.jpg"
+                alt="Sextavados e Fendados"
+              />
+              <div class="card-title">Sextavados e Fendados</div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn">&#60;</button>
+            <button class="slider-btn" id="nextBtn">&#62;</button>
+          </div>
+          <!-- </div> -->
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
