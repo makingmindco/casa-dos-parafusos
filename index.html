@@ -9,6 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Casa dos Parafusos</title>
   </head>
@@ -27,10 +35,10 @@
           <span></span>
         </button>
         <ul class="ul-menu" id="ulMenu">
-          <li class="li-menu"><a href="#home">Home</a></li>
+          <li class="li-menu"><a href="#">Home</a></li>
           <li class="li-menu"><a href="#about-us">Sobre nós</a></li>
-          <li class="li-menu"><a href="#produtos">Produtos</a></li>
-          <li class="li-menu"><a href="#fale-conosco">Fale Conosco</a></li>
+          <li class="li-menu"><a href="#products">Produtos</a></li>
+          <li class="li-menu"><a href="#">Fale Conosco</a></li>
         </ul>
       </nav>
     </header>
@@ -77,10 +85,16 @@
         </div>
       </section>
 
+      <section id="cta">
+        <h2>Seu projeto merece qualidade!</h2>
+        <a href="https://wa.me/551935854192" target="_blank"
+          >Fale com um especialista</a
+        >
+      </section>
+
       <section id="products">
         <div class="slider-container">
           <div class="slider-title">Nossos Produtos</div>
-          <!-- <div style="position: relative"> -->
           <div class="slider-wrapper" id="sliderWrapper">
             <div class="slider-card">
               <img src="assets/img/parafuso-olhal.jpg" alt="Parafuso Olhal" />
@@ -117,11 +131,64 @@
             <button class="slider-btn" id="prevBtn">&#60;</button>
             <button class="slider-btn" id="nextBtn">&#62;</button>
           </div>
-          <!-- </div> -->
           <div class="slider-dots" id="sliderDots"></div>
         </div>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-logo-container">
+        <img
+          src="./assets/img/logo-casa-dos-parafusos.png"
+          alt="Logo Casa dos Parafusos"
+        />
+
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/casadosparafusospf/"
+            target="_blank"
+          >
+            <ion-icon name="logo-facebook"> </ion-icon>
+          </a>
+          <a href="https://www.instagram.com/casaparafusos03/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer-about-container">
+        <h3>Sobre</h3>
+        <p>
+          Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto Ferreira
+          - SP, a Casa dos Parafusos é aquela loja onde você sempre encontra o
+          que precisa: alicates, brocas, parafusos e ferragens de qualidade,
+          além de um excelente atendimento.
+        </p>
+      </div>
+      <div class="footer-service-container">
+        <div class="footer-service-container">
+          <h3>Atendimento</h3>
+          <ul>
+            <li><ion-icon name="call-outline"></ion-icon>(19) 3585-4192</li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:contato@casadosparafusospf.com.br"
+                >contato@casadosparafusospf.com.br</a
+              >
+            </li>
+            <li>
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <a href="https://wa.me/551935854192" target="_blank">WhatsApp</a>
+            </li>
+          </ul>
+          <span>Seg a Sex: 8h00 às 18h00</span>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        © 2025 Casa dos Parafusos, Porto Ferreira-SP | Todos os direitos
+        reservados.
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
