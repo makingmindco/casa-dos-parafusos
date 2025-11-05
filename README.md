@@ -21,12 +21,12 @@ A **Casa dos Parafusos** é uma loja tradicional, há mais de 20 anos no mercado
 ## Instalação e Uso
 
 1. Clone o repositório:  
-   `git clone https://github.com/seuusuario/casa-dos-parafusos-website.git`
+   `git clone https://github.com/dsm-fatec-2025/casa-dos-parafusos.git`
 2. Abra o arquivo `index.html` em um navegador da web.
 
 ## Deploy
  
-`https://casadosparafusospf.netlify.app/`
+`https://casadosparafusos.netlify.app/`
 
 ## Licença
 
