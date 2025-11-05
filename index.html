@@ -1,12 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa dos Parafusos</title>
-</head>
-<body>
-    <h1>Casa dos Parafusos</h1>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-casa-dos-parafusos.ico"
+      type="image/x-icon"
+    />
+    <title>Casa dos Parafusos - Sua loja de parafusos em Porto Ferreira!</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./assets/img/logo-casa-dos-parafusos.png"
+        alt="logo-casa-dos-parafusos"
+        class="header-logo"
+      />
+
+      <nav class="nav-menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="ul-menu" id="ulMenu">
+          <li class="li-menu"><a href="#">Home</a></li>
+          <li class="li-menu"><a href="#about-us">Sobre nós</a></li>
+          <li class="li-menu"><a href="#products">Produtos</a></li>
+          <li class="li-menu"><a href="#">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="hero">
+        <div class="hero-text-container">
+          <h1>Tudo o que sua obra precisa, está aqui!</h1>
+          <p>
+            Oferemos parafusos, soluções de fixação e obras em geral com
+            qualidade comprovada e atendimento especializado.
+          </p>
+
+          <a href="http://wa.me/+5519920009409" target="_blank" class="hero-btn"
+            >Fazer orçamento</a
+          >
+        </div>
+      </div>
+
+      <section id="about-us">
+        <img
+          src="./assets/img/screws.jpg"
+          alt="Foto de uma caixa de parafusos"
+        />
+
+        <div class="about-content">
+          <h3 class="about-heading">Estamos a mais de 20 anos no mercado!</h3>
+
+          <p>
+            Situada em Porto Ferreira, a Casa dos Parafusos é aquela loja onde
+            você sempre encontra o que precisa: alicates, brocas, parafusos e
+            ferragens de qualidade, além de um atendimento que conhece cada
+            cliente pelo nome.
+          </p>
+          <br />
+
+          <p>
+            Aqui, material bom e preço justo caminham juntos. Pode contar com a
+            gente para ajudar na sua construção, reforma ou aquele ajuste rápido
+            do dia a dia. Estamos prontos para receber você com aquele cuidado
+            de quem faz parte da cidade e da sua história.
+          </p>
+          <br />
+        </div>
+      </section>
+
+      <section id="cta">
+        <h2>Seu projeto merece qualidade!</h2>
+        <a href="https://wa.me/551935854192" target="_blank"
+          >Fale com um especialista</a
+        >
+      </section>
+
+      <section id="products">
+        <div class="slider-container">
+          <div class="slider-title">Nossos Produtos</div>
+          <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slider-card">
+              <img src="assets/img/parafuso-olhal.jpg" alt="Parafuso Olhal" />
+              <div class="card-title">Parafuso Olhal</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/parafuso.jpg" alt="Porcas" />
+              <div class="card-title">Parafusos</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/barra-roscada.jpg" alt="Barra Roscada" />
+              <div class="card-title">Barra Roscada</div>
+            </div>
+            <div class="slider-card">
+              <img src="assets/img/conforme-desenho.jpg" alt="Conjuntos" />
+              <div class="card-title">Conjuntos</div>
+            </div>
+            <div class="slider-card">
+              <img
+                src="assets/img/parafusos-especiais.jpg"
+                alt="Parafusos Especiais"
+              />
+              <div class="card-title">Parafusos Especiais</div>
+            </div>
+            <div class="slider-card">
+              <img
+                src="assets/img/sextavados-e-fendados.jpg"
+                alt="Sextavados e Fendados"
+              />
+              <div class="card-title">Sextavados e Fendados</div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn">&#60;</button>
+            <button class="slider-btn" id="nextBtn">&#62;</button>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo-container">
+        <img
+          src="./assets/img/logo-casa-dos-parafusos.png"
+          alt="Logo Casa dos Parafusos"
+        />
+
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/casadosparafusospf/"
+            target="_blank"
+          >
+            <ion-icon name="logo-facebook"> </ion-icon>
+          </a>
+          <a href="https://www.instagram.com/casaparafusos03/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer-about-container">
+        <h3>Sobre</h3>
+        <p>
+          Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto Ferreira
+          - SP, a Casa dos Parafusos é aquela loja onde você sempre encontra o
+          que precisa: alicates, brocas, parafusos e ferragens de qualidade,
+          além de um excelente atendimento.
+        </p>
+      </div>
+      <div class="footer-service-container">
+        <div class="footer-service-container">
+          <h3>Atendimento</h3>
+          <ul>
+            <li><ion-icon name="call-outline"></ion-icon>(19) 3585-4192</li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:contato@casadosparafusospf.com.br"
+                >contato@casadosparafusospf.com.br</a
+              >
+            </li>
+            <li>
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <a href="https://wa.me/551935854192" target="_blank">WhatsApp</a>
+            </li>
+          </ul>
+          <span>Seg a Sex: 8h00 às 18h00</span>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        © 2025 Casa dos Parafusos, Porto Ferreira-SP | Todos os direitos
+        reservados.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
