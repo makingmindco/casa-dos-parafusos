@@ -4,7 +4,7 @@
 
 # Casa dos Parafusos
 
-Bem-vindo ao projeto **Casa dos Parafusos**! Este é um site fictício para uma loja de ferramentas e ferragens localizada em Porto Ferreira-SP, desenvolvido com HTML, CSS e JavaScript.
+Bem-vindo ao projeto **Casa dos Parafusos**! Este é um site para uma loja de ferramentas e ferragens localizada em Porto Ferreira-SP, desenvolvido com HTML, CSS e JavaScript.
 
 ## Sobre o Projeto
 
