@@ -1,0 +1,130 @@
+footer {
+  width: 100%;
+  height: 17rem;
+  background: var(--cor-preta);
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.5rem 5vw 1rem 5vw;
+  gap: 2rem;
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+}
+
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 200px;
+}
+
+.footer-logo-container img {
+  width: 200px;
+  height: 72px;
+  object-fit: cover;
+  clip-path: inset(15% 0 15% 0);
+  display: block;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons ion-icon {
+  font-size: 1.5rem;
+  color: var(--cor-laranja);
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icons ion-icon:hover {
+  background: var(--cor-laranja);
+  color: #fff;
+}
+
+.footer-about-container {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.footer-about-container h3,
+.footer-service-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.footer-about-container p {
+  margin: 0;
+  line-height: 1.6;
+  color: #d0d0d0;
+  font-size: 1rem;
+}
+
+.footer-service-container {
+  min-width: 220px;
+  text-align: left;
+}
+
+.footer-service-container ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.8rem;
+}
+
+.footer-service-container li {
+  margin-bottom: 0.55rem;
+  font-size: 1rem;
+  color: #d0d0d0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-service-container ion-icon {
+  margin-right: 8px;
+  font-size: 1.23rem;
+  color: var(--cor-laranja);
+}
+
+.footer-service-container a {
+  display: inline-block;
+  color: var(--cor-laranja);
+  background: #fff;
+  border-radius: 8px;
+  padding: 2px 12px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-service-container a:hover {
+  background: var(--cor-laranja);
+  color: #fff;
+}
+
+.footer-service-container span {
+  color: #afb9c7;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 4px;
+}
+
+.footer-legal {
+  width: 100%;
+  text-align: center;
+  font-size: 0.95em;
+  color: var(--cor-branca);
+  padding: 0.9rem 0 0.3rem 0;
+  background: var(--cor-preta);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  letter-spacing: 0.5px;
+}
