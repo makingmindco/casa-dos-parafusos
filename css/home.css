@@ -176,7 +176,7 @@ body {
 #about-us img {
   max-height: 20rem;
   max-width: 100%;
-  border-radius: 1rem;
+  border-radius: var(--radius);
 }
 
 .about-content {
