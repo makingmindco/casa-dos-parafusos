@@ -19,10 +19,6 @@
   color: var(--cor-branca);
 }
 
-main {
-  height: 200vh;
-}
-
 .about-container {
   margin: 5rem auto;
   width: 100%;
