@@ -60,3 +60,8 @@ html {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* Ensure CTA buttons use white text by default for consistent contrast */
+.cta-button {
+  color: var(--cor-branca);
+}
