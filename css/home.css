@@ -149,6 +149,7 @@ body {
   justify-content: center;
   cursor: pointer;
   border: 2px solid transparent;
+  color: var(--cor-branca);
 }
 
 .cta-button.primary {
@@ -158,7 +159,7 @@ body {
 
 .cta-button.primary:hover {
   background-color: var(--cor-preta);
-  color: var(--cor-laranja);
+  color: var(--cor-branca);
   border-color: var(--cor-laranja);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(223, 121, 40, 0.4);
@@ -206,7 +207,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
-
 
 .product-card:nth-child(1) {
   animation-delay: 0.1s;
@@ -425,7 +425,6 @@ body {
   object-fit: cover;
   transition: transform 0.4s ease;
   display: block;
-  border-radius: var(--radius);
 }
 
 .product-card:hover img {
@@ -551,8 +550,8 @@ body {
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
   border-color: var(--cor-laranja);
 }
 
@@ -617,6 +616,7 @@ body {
   display: inline-flex;
   align-items: center;
   animation: slideBrands 40s infinite linear;
+  flex-wrap: nowrap;
   gap: 100px;
   padding: 0 50px;
   will-change: transform;
