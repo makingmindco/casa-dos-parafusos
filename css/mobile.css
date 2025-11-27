@@ -318,8 +318,10 @@
 
 @media (max-width: 500px) {
   .hero-section {
-    height: 60vh;
-    min-height: 400px;
+    height: 75vh;
+    min-height: 520px;
+    padding-top: 4.5rem;
+    justify-content: flex-start;
   }
 
   .hero-content {
@@ -370,5 +372,19 @@
 
   .brand-logo-item img {
     height: 40px;
+  }
+
+  /* Margem lateral global para mobile — aplicável até 768px para mais espaço lateral */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .brands-track {
+    gap: 50px;
+    flex-wrap: nowrap;
   }
 }

@@ -64,6 +64,12 @@ footer::before {
   justify-content: center;
 }
 
+@media (min-width: 769px) {
+  .social-links {
+    margin-left: 3rem;
+  }
+}
+
 .social-link {
   text-decoration: none;
   display: flex;
@@ -219,4 +225,10 @@ footer::before {
 .footer-copyright p {
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+  }
 }
