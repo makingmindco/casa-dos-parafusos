@@ -1,130 +1,222 @@
 footer {
   width: 100%;
-  height: 17rem;
   background: var(--cor-preta);
   color: #fff;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 2.5rem 5vw 1rem 5vw;
-  gap: 2rem;
-  font-family: "Raleway", Arial, sans-serif;
   position: relative;
+  overflow: hidden;
 }
 
-.footer-logo-container {
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--cor-laranja),
+    #e68a2e,
+    var(--cor-laranja)
+  );
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  padding: 3rem 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  min-width: 200px;
+  gap: 1.5rem;
 }
 
-.footer-logo-container img {
+.footer-brand img {
   width: 200px;
   height: 72px;
   object-fit: cover;
   clip-path: inset(15% 0 15% 0);
   display: block;
+  transition: transform 0.3s ease;
 }
 
-.social-icons a {
-  text-decoration: none;
+.footer-brand img:hover {
+  transform: scale(1.05);
 }
 
-.social-icons ion-icon {
-  font-size: 1.5rem;
-  color: var(--cor-laranja);
-  background: #fff;
-  border-radius: 50%;
-  padding: 0.5rem;
-  transition: background 0.2s, color 0.2s;
-}
-
-.social-icons ion-icon:hover {
-  background: var(--cor-laranja);
-  color: #fff;
-}
-
-.footer-about-container {
-  flex: 1;
-  padding: 0 2rem;
-}
-
-.footer-about-container h3,
-.footer-service-container h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.7rem;
-  color: #fff;
-  letter-spacing: 0.5px;
-}
-
-.footer-about-container p {
-  margin: 0;
+.footer-tagline {
+  color: #d0d0d0;
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: #d0d0d0;
-  font-size: 1rem;
+  margin: 0;
+  max-width: 280px;
 }
 
-.footer-service-container {
-  min-width: 220px;
-  text-align: left;
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  justify-content: center;
 }
 
-.footer-service-container ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0.8rem;
-}
-
-.footer-service-container li {
-  margin-bottom: 0.55rem;
-  font-size: 1rem;
-  color: #d0d0d0;
+.social-link {
+  text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  width: 45px;
+  height: 45px;
 }
 
-.footer-service-container ion-icon {
-  margin-right: 8px;
-  font-size: 1.23rem;
+.social-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-link ion-icon {
+  font-size: 1.5rem;
   color: var(--cor-laranja);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 0.6rem;
+  transition: all 0.3s ease;
 }
 
-.footer-service-container a {
-  display: inline-block;
-  color: var(--cor-laranja);
-  background: #fff;
-  border-radius: 8px;
-  padding: 2px 12px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: 5px;
-  font-size: 1rem;
-  transition: background 0.2s, color 0.2s;
-}
-
-.footer-service-container a:hover {
+.social-link:hover ion-icon {
   background: var(--cor-laranja);
   color: #fff;
+  transform: scale(1.1);
 }
 
-.footer-service-container span {
-  color: #afb9c7;
-  font-size: 0.8rem;
-  display: block;
-  margin-top: 4px;
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.footer-legal {
+.footer-info h3,
+.footer-contact h3 {
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.footer-info p {
+  margin: 0;
+  line-height: 1.7;
+  color: #d0d0d0;
+  font-size: 0.95rem;
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}
+
+.footer-location ion-icon {
+  color: var(--cor-laranja);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+.contact-list ion-icon {
+  font-size: 1.3rem;
+  color: var(--cor-laranja);
+  flex-shrink: 0;
+}
+
+.contact-list a {
+  color: var(--cor-laranja);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.business-hours {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--cor-laranja);
+}
+
+.business-hours ion-icon {
+  font-size: 1.3rem;
+  color: var(--cor-laranja);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.business-hours div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.business-hours strong {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.business-hours span {
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}
+
+.footer-copyright {
   width: 100%;
   text-align: center;
-  font-size: 0.95em;
-  color: var(--cor-branca);
-  padding: 0.9rem 0 0.3rem 0;
-  background: var(--cor-preta);
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  font-size: 0.9em;
+  color: #999;
+  padding: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+  margin: 0;
   letter-spacing: 0.5px;
 }
