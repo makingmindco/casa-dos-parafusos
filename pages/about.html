@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sobre a Casa dos Parafusos — história, missão e equipe. Loja de parafusos e ferragens em Porto Ferreira com atendimento técnico especializado." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Sobre — Casa dos Parafusos | História e Equipe" />
+    <meta property="og:description" content="Conheça a história, missão e valores da Casa dos Parafusos, referência em parafusos e soluções de fixação em Porto Ferreira." />
+    <meta property="og:image" content="../assets/img/logo-casa-dos-parafusos.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,9 +31,10 @@
       href="../assets/img/logo-casa-dos-parafusos.ico"
       type="image/x-icon"
     />
-    <title>Casa dos Parafusos - Sua loja de parafusos em Porto Ferreira!</title>
+    <title>Sobre — Casa dos Parafusos | História e Equipe</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header>
       <img
         src="../assets/img/logo-casa-dos-parafusos.png"
@@ -34,7 +42,7 @@
         class="brand-logo"
       />
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Menu principal">
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
           <span></span>
           <span></span>
@@ -42,7 +50,7 @@
         </button>
         <ul class="nav-list" id="navList">
           <li class="nav-item"><a href="../index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html">Sobre nós</a></li>
+          <li class="nav-item"><a href="about.html" aria-current="page">Sobre nós</a></li>
           <li class="nav-item"><a href="products.html">Produtos</a></li>
           <li class="nav-item"><a href="contact.html">Fale Conosco</a></li>
         </ul>
@@ -50,6 +58,7 @@
     </header>
 
     <main>
+      <div id="main-content"></div>
       <div class="about-hero">
         <div class="about-hero-container">
           <h1>Quem Somos</h1>
@@ -57,6 +66,7 @@
             Mais de duas décadas oferecendo qualidade, confiança e atendimento
             especializado em Porto Ferreira e região.
           </p>
+          <!-- removed hero CTA to use floating WhatsApp same as home -->
         </div>
         <div class="hero-decoration"></div>
       </div>
@@ -98,7 +108,6 @@
         </div>
       </section>
 
-      
       <section class="mvv-section">
         <div class="container">
           <div class="mvv-header">
@@ -106,7 +115,6 @@
             <h2 class="section-title">Missão, Visão e Valores</h2>
           </div>
           <div class="mvv-grid">
-            
             <div class="mvv-card scroll-reveal">
               <div class="mvv-icon">
                 <ion-icon name="target-outline"></ion-icon>
@@ -119,7 +127,6 @@
               </p>
             </div>
 
-            
             <div class="mvv-card scroll-reveal">
               <div class="mvv-icon">
                 <ion-icon name="eye-outline"></ion-icon>
@@ -132,7 +139,6 @@
               </p>
             </div>
 
-            
             <div class="mvv-card scroll-reveal">
               <div class="mvv-icon">
                 <ion-icon name="heart-outline"></ion-icon>
@@ -147,7 +153,6 @@
         </div>
       </section>
 
-      
       <section class="team-section">
         <div class="container">
           <div class="team-header">
@@ -159,7 +164,6 @@
             </p>
           </div>
           <div class="team-grid">
-            
             <div class="team-card scroll-reveal">
               <div class="team-avatar">
                 <img src="../assets/img/screws.jpg" alt="João Ponciano" />
@@ -172,7 +176,6 @@
               </p>
             </div>
 
-            
             <div class="team-card scroll-reveal">
               <div class="team-avatar">
                 <img src="../assets/img/screws.jpg" alt="Marcos Silva" />
@@ -185,7 +188,6 @@
               </p>
             </div>
 
-            
             <div class="team-card scroll-reveal">
               <div class="team-avatar">
                 <img src="../assets/img/screws.jpg" alt="Carla Souza" />
@@ -198,7 +200,6 @@
               </p>
             </div>
 
-            
             <div class="team-card scroll-reveal">
               <div class="team-avatar">
                 <img src="../assets/img/screws.jpg" alt="Leonardo Ramos" />
@@ -214,15 +215,15 @@
         </div>
       </section>
 
-      
       <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-header">
             <span class="section-badge">O Que Dizem</span>
             <h2 class="section-title">Depoimentos de Clientes</h2>
           </div>
-          <div class="testimonials-grid">
-            
+          <div
+            class="testimonials-grid testimonials-carousel testimonials-track"
+          >
             <div class="testimonial-card scroll-reveal">
               <div class="testimonial-stars">
                 <ion-icon name="star"></ion-icon>
@@ -242,7 +243,6 @@
               </div>
             </div>
 
-            
             <div class="testimonial-card scroll-reveal">
               <div class="testimonial-stars">
                 <ion-icon name="star"></ion-icon>
@@ -260,11 +260,47 @@
                 <span>Engenheira Civil</span>
               </div>
             </div>
+
+            <div class="testimonial-card scroll-reveal">
+              <div class="testimonial-stars">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="testimonial-text">
+                "Atendimento incrível e produtos de confiança. Sempre encontro o
+                que preciso para minhas obras."
+              </p>
+              <div class="testimonial-author">
+                <strong>Rogério Alves</strong>
+                <span>Empreiteiro</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card scroll-reveal">
+              <div class="testimonial-stars">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="testimonial-text">
+                "Produtos de ótima qualidade e um suporte técnico que ajuda
+                muito. Recomendo para colegas de profissão."
+              </p>
+              <div class="testimonial-author">
+                <strong>Ana Paula</strong>
+                <span>Marcenaria</span>
+              </div>
+            </div>
           </div>
+          <div class="testimonials-dots"></div>
         </div>
       </section>
 
-      
       <section class="cta-final-section">
         <div class="cta-final-content">
           <h2 class="section-title">Faça parte da nossa história</h2>
@@ -284,7 +320,7 @@
 
     <footer>
       <div class="footer-content">
-        <div class="footer-brand">
+        <div class="footer-brand scroll-reveal">
           <img
             src="../assets/img/logo-casa-dos-parafusos.png"
             alt="Casa dos Parafusos - Logo"
@@ -312,7 +348,7 @@
           </div>
         </div>
 
-        <div class="footer-info">
+        <div class="footer-info scroll-reveal">
           <h3>Nossa Loja</h3>
           <p>
             Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto
@@ -326,7 +362,7 @@
           </div>
         </div>
 
-        <div class="footer-contact">
+        <div class="footer-contact scroll-reveal">
           <h3>Contato</h3>
           <ul class="contact-list">
             <li>
@@ -356,12 +392,21 @@
 
       <div class="footer-copyright">
         <p>
-          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os direitos
-          reservados.
+          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os
+          direitos reservados.
         </p>
       </div>
     </footer>
 
     <script src="../js/script.js"></script>
+    <a
+      href="https://wa.me/551935854192"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
   </body>
 </html>
