@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Casa dos Parafusos — há mais de 20 anos em Porto Ferreira oferecendo parafusos, fixadores e ferragens com atendimento técnico especializado." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Casa dos Parafusos — Parafusos, Ferragens e Fixação | Porto Ferreira" />
+    <meta property="og:description" content="Loja especializada em parafusos, arruelas, porcas e soluções de fixação. Atendimento técnico e prazos ágeis." />
+    <meta property="og:image" content="./assets/img/logo-casa-dos-parafusos.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +33,7 @@
     <title>Casa dos Parafusos - Sua loja de parafusos em Porto Ferreira!</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header>
       <img
         src="./assets/img/logo-casa-dos-parafusos.png"
@@ -33,17 +41,19 @@
         class="brand-logo"
       />
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Menu principal">
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
         <ul class="nav-list" id="navList">
-          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
           <li class="nav-item"><a href="pages/about.html">Sobre nós</a></li>
           <li class="nav-item"><a href="pages/products.html">Produtos</a></li>
-          <li class="nav-item"><a href="pages/contact.html">Fale Conosco</a></li>
+          <li class="nav-item">
+            <a href="pages/contact.html">Fale Conosco</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -60,8 +70,9 @@
           </p>
           <div class="hero-actions">
             <a
-              href="http://wa.me/551935854192"
+              href="https://wa.me/551935854192"
               target="_blank"
+              rel="noopener noreferrer"
               class="cta-button primary"
               >Fazer orçamento</a
             >
@@ -190,7 +201,7 @@
           </div>
 
           <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card scroll-reveal">
               <div class="feature-icon">
                 <ion-icon name="shield-checkmark-outline"></ion-icon>
               </div>
@@ -200,7 +211,7 @@
                 reconhecidas no mercado
               </p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card scroll-reveal">
               <div class="feature-icon">
                 <ion-icon name="people-outline"></ion-icon>
               </div>
@@ -210,7 +221,7 @@
                 diferenciado e humanizado
               </p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card scroll-reveal">
               <div class="feature-icon">
                 <ion-icon name="cash-outline"></ion-icon>
               </div>
@@ -220,7 +231,7 @@
                 custo-benefício da região
               </p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card scroll-reveal">
               <div class="feature-icon">
                 <ion-icon name="time-outline"></ion-icon>
               </div>
@@ -241,6 +252,7 @@
           <a
             href="https://wa.me/551935854192"
             target="_blank"
+            rel="noopener noreferrer"
             class="cta-button primary large"
             >Fale com um especialista</a
           >
@@ -290,7 +302,7 @@
                 alt="Vonder"
               />
             </div>
-            
+
             <div class="brand-logo-item">
               <img
                 src="./assets/img/Logos Marcas/Black & Decker Logo.png"
@@ -331,7 +343,7 @@
 
     <footer>
       <div class="footer-content">
-        <div class="footer-brand">
+        <div class="footer-brand scroll-reveal">
           <img
             src="./assets/img/logo-casa-dos-parafusos.png"
             alt="Casa dos Parafusos - Logo"
@@ -343,6 +355,7 @@
             <a
               href="https://www.facebook.com/casadosparafusospf/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               class="social-link"
             >
@@ -351,6 +364,7 @@
             <a
               href="https://www.instagram.com/casaparafusos03/"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               class="social-link"
             >
@@ -359,7 +373,7 @@
           </div>
         </div>
 
-        <div class="footer-info">
+        <div class="footer-info scroll-reveal">
           <h3>Nossa Loja</h3>
           <p>
             Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto
@@ -373,7 +387,7 @@
           </div>
         </div>
 
-        <div class="footer-contact">
+        <div class="footer-contact scroll-reveal">
           <h3>Contato</h3>
           <ul class="contact-list">
             <li>
@@ -403,8 +417,8 @@
 
       <div class="footer-copyright">
         <p>
-          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os direitos
-          reservados.
+          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os
+          direitos reservados.
         </p>
       </div>
     </footer>
@@ -412,6 +426,7 @@
     <a
       href="https://wa.me/551935854192"
       target="_blank"
+      rel="noopener noreferrer"
       class="whatsapp-float"
       aria-label="Fale conosco no WhatsApp"
     >
