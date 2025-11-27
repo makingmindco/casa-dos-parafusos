@@ -26,3 +26,37 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Skip link: hidden visually but visible on keyboard focus for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--cor-laranja);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 999;
+  border-radius: 0 0 6px 6px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* Global reveal defaults for extra elements (worked together with .scroll-reveal) */
+.section-title,
+.section-badge,
+.feature-icon,
+.product-image,
+.testimonial-card,
+.hero-content,
+.footer-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
