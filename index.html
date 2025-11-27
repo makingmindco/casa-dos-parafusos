@@ -29,48 +29,63 @@
     <header>
       <img
         src="./assets/img/logo-casa-dos-parafusos.png"
-        alt="logo-casa-dos-parafusos"
-        class="header-logo"
+        alt="Casa dos Parafusos - Logo"
+        class="brand-logo"
       />
 
-      <nav class="nav-menu">
+      <nav class="main-nav">
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="ul-menu" id="ulMenu">
-          <li class="li-menu"><a href="#">Home</a></li>
-          <li class="li-menu"><a href="about-us.html">Sobre nós</a></li>
-          <li class="li-menu"><a href="#products">Produtos</a></li>
-          <li class="li-menu"><a href="contact.html">Fale Conosco</a></li>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="pages/about.html">Sobre nós</a></li>
+          <li class="nav-item"><a href="pages/products.html">Produtos</a></li>
+          <li class="nav-item"><a href="pages/contact.html">Fale Conosco</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div id="hero">
-        <div class="hero-text-container">
+      <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-badge">Mais de 20 anos de experiência</span>
           <h1>Tudo o que sua obra precisa, está aqui!</h1>
           <p>
             Oferecemos parafusos, soluções de fixação e obras em geral com
             qualidade comprovada e atendimento especializado.
           </p>
-
-          <a href="http://wa.me/551935854192" target="_blank" class="hero-btn"
-            >Fazer orçamento</a
-          >
+          <div class="hero-actions">
+            <a
+              href="http://wa.me/551935854192"
+              target="_blank"
+              class="cta-button primary"
+              >Fazer orçamento</a
+            >
+            <a href="pages/products.html" class="cta-button secondary"
+              >Ver catálogo completo</a
+            >
+          </div>
         </div>
-      </div>
+        <div class="hero-decoration"></div>
+      </section>
 
-      <section id="about-us">
-        <img
-          src="./assets/img/screws.jpg"
-          alt="Foto de uma caixa de parafusos"
-        />
+      <section class="about-section">
+        <div class="about-image">
+          <img
+            src="./assets/img/screws.jpg"
+            alt="Parafusos e ferragens organizados"
+          />
+        </div>
 
-        <div class="about-content">
-          <h3 class="about-heading">Estamos há mais de 20 anos no mercado!</h3>
+        <div class="content-wrapper">
+          <span class="section-badge">Nossa história</span>
+          <h2 class="section-heading">
+            Estamos há mais de 20 anos no mercado!
+          </h2>
 
           <p>
             Situada em Porto Ferreira, a Casa dos Parafusos é aquela loja onde
@@ -78,7 +93,6 @@
             ferragens de qualidade, além de um atendimento que conhece cada
             cliente pelo nome.
           </p>
-          <br />
 
           <p>
             Aqui, material bom e preço justo caminham juntos. Pode contar com a
@@ -86,109 +100,286 @@
             do dia a dia. Estamos prontos para receber você com aquele cuidado
             de quem faz parte da cidade e da sua história.
           </p>
-          <br />
         </div>
       </section>
 
-      <section id="products">
-        <div class="slider-container">
-          <div class="slider-title">Nossos Produtos</div>
-          <div class="slider-wrapper" id="sliderWrapper">
-            <div class="slider-card">
-              <img src="assets/img/parafuso-olhal.jpg" alt="Parafuso Olhal" />
-              <div class="card-title">Parafuso Olhal</div>
+      <section id="products" class="products-section">
+        <div class="products-showcase">
+          <div class="section-header">
+            <span class="section-badge">Catálogo completo</span>
+            <h2 class="section-title">Nossos Produtos</h2>
+            <p class="section-subtitle">
+              Tudo que você precisa para sua obra, em um só lugar
+            </p>
+          </div>
+
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/parafuso-olhal.jpg" alt="Parafuso Olhal" />
+              </div>
+              <div class="product-name">Parafuso Olhal</div>
             </div>
-            <div class="slider-card">
-              <img src="assets/img/parafuso.jpg" alt="Porcas" />
-              <div class="card-title">Parafusos</div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/parafuso.jpg" alt="Parafusos" />
+              </div>
+              <div class="product-name">Parafusos</div>
             </div>
-            <div class="slider-card">
-              <img src="assets/img/barra-roscada.jpg" alt="Barra Roscada" />
-              <div class="card-title">Barra Roscada</div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/barra-roscada.jpg" alt="Barra Roscada" />
+              </div>
+              <div class="product-name">Barra Roscada</div>
             </div>
-            <div class="slider-card">
-              <img src="assets/img/conforme-desenho.jpg" alt="Conjuntos" />
-              <div class="card-title">Conjuntos</div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/conforme-desenho.jpg" alt="Conjuntos" />
+              </div>
+              <div class="product-name">Conjuntos</div>
             </div>
-            <div class="slider-card">
-              <img
-                src="assets/img/parafusos-especiais.jpg"
-                alt="Parafusos Especiais"
-              />
-              <div class="card-title">Parafusos Especiais</div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/img/parafusos-especiais.jpg"
+                  alt="Parafusos Especiais"
+                />
+              </div>
+              <div class="product-name">Parafusos Especiais</div>
             </div>
-            <div class="slider-card">
-              <img
-                src="assets/img/sextavados-e-fendados.jpg"
-                alt="Sextavados e Fendados"
-              />
-              <div class="card-title">Sextavados e Fendados</div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/img/sextavados-e-fendados.jpg"
+                  alt="Sextavados e Fendados"
+                />
+              </div>
+              <div class="product-name">Sextavados e Fendados</div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/img/cavilhas-de-plastico.jpg"
+                  alt="Cavilhas de Plástico"
+                />
+              </div>
+              <div class="product-name">Cavilhas de Plástico</div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="assets/img/estojos-ASTM.jpg" alt="Estojos ASTM" />
+              </div>
+              <div class="product-name">Estojos ASTM</div>
             </div>
           </div>
-          <div class="slider-controls">
-            <button class="slider-btn" id="prevBtn">&#60;</button>
-            <button class="slider-btn" id="nextBtn">&#62;</button>
+
+          <div class="products-action">
+            <a href="#" class="cta-button primary">Ver todos os produtos</a>
           </div>
-          <div class="slider-dots" id="sliderDots"></div>
         </div>
       </section>
 
-      <section id="cta">
-        <h2>Seu projeto merece qualidade!</h2>
-        <a href="https://wa.me/551935854192" target="_blank"
-          >Fale com um especialista</a
-        >
+      <section class="features-section">
+        <div class="features-container">
+          <div class="section-header">
+            <span class="section-badge">Por que escolher?</span>
+            <h2 class="section-title">Nossos Diferenciais</h2>
+            <p class="section-subtitle">
+              Excelência em qualidade e atendimento há mais de 20 anos
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+              </div>
+              <h3>Qualidade Garantida</h3>
+              <p>
+                Trabalhamos apenas com produtos de alta qualidade e marcas
+                reconhecidas no mercado
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h3>Atendimento Personalizado</h3>
+              <p>
+                Conhecemos cada cliente pelo nome e oferecemos um atendimento
+                diferenciado e humanizado
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <ion-icon name="cash-outline"></ion-icon>
+              </div>
+              <h3>Preço Justo</h3>
+              <p>
+                Oferecemos os melhores preços com a melhor relação
+                custo-benefício da região
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <ion-icon name="time-outline"></ion-icon>
+              </div>
+              <h3>Mais de 20 Anos</h3>
+              <p>
+                Experiência e tradição em Porto Ferreira, sendo referência no
+                segmento
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="customer-section">
-        <div class="slider-title">Principais marcas que trabalhamos</div>
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Seu projeto merece qualidade!</h2>
+          <p>Conte com nossa experiência para tornar sua obra um sucesso</p>
+          <a
+            href="https://wa.me/551935854192"
+            target="_blank"
+            class="cta-button primary large"
+            >Fale com um especialista</a
+          >
+        </div>
+      </section>
 
-        <div class="logos">
-          <div class="logos-slide">
-            <img src="./assets/img/Logos Marcas/Black & Decker Logo.png" />
-            <img src="./assets/img/Logos Marcas/Bosch Logo.png" />
-            <img src="./assets/img/Logos Marcas/dewalt-logo.png" />
-            <img src="./assets/img/Logos Marcas/Makita Logo.png" />
-            <img src="./assets/img/Logos Marcas/schulz-logo.png" />
-            <img src="./assets/img/Logos Marcas/vonder-logo.png" />
+      <section class="brands-section">
+        <div class="brands-wrapper">
+          <h2 class="section-title">Algumas marcas que trabalhamos</h2>
+          <p class="section-subtitle">
+            Produtos das melhores marcas do mercado
+          </p>
+        </div>
+
+        <div class="brands-carousel">
+          <div class="brands-track">
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/Black & Decker Logo.png"
+                alt="Black & Decker"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./assets/img/Logos Marcas/Bosch Logo.png" alt="Bosch" />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/dewalt-logo.png"
+                alt="DeWalt"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/Makita Logo.png"
+                alt="Makita"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/schulz-logo.png"
+                alt="Schulz"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/vonder-logo.png"
+                alt="Vonder"
+              />
+            </div>
+            
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/Black & Decker Logo.png"
+                alt="Black & Decker"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./assets/img/Logos Marcas/Bosch Logo.png" alt="Bosch" />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/dewalt-logo.png"
+                alt="DeWalt"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/Makita Logo.png"
+                alt="Makita"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/schulz-logo.png"
+                alt="Schulz"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./assets/img/Logos Marcas/vonder-logo.png"
+                alt="Vonder"
+              />
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="footer-logo-container">
-        <img
-          src="./assets/img/logo-casa-dos-parafusos.png"
-          alt="Logo Casa dos Parafusos"
-        />
-
-        <div class="social-icons">
-          <a
-            href="https://www.facebook.com/casadosparafusospf/"
-            target="_blank"
-          >
-            <ion-icon name="logo-facebook"> </ion-icon>
-          </a>
-          <a href="https://www.instagram.com/casaparafusos03/" target="_blank">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img
+            src="./assets/img/logo-casa-dos-parafusos.png"
+            alt="Casa dos Parafusos - Logo"
+          />
+          <p class="footer-tagline">
+            Mais de 20 anos oferecendo qualidade e confiança em Porto Ferreira
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/casadosparafusospf/"
+              target="_blank"
+              aria-label="Facebook"
+              class="social-link"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/casaparafusos03/"
+              target="_blank"
+              aria-label="Instagram"
+              class="social-link"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="footer-about-container">
-        <h3>Sobre</h3>
-        <p>
-          Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto Ferreira
-          - SP, a Casa dos Parafusos é aquela loja onde você sempre encontra o
-          que precisa: alicates, brocas, parafusos e ferragens de qualidade,
-          além de um excelente atendimento personalizado.
-        </p>
-      </div>
-      <div class="footer-service-container">
-        <div class="footer-service-container">
-          <h3>Atendimento</h3>
-          <ul>
-            <li><ion-icon name="call-outline"></ion-icon>(19) 3585-4192</li>
+
+        <div class="footer-info">
+          <h3>Nossa Loja</h3>
+          <p>
+            Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto
+            Ferreira - SP, a Casa dos Parafusos é aquela loja onde você sempre
+            encontra o que precisa: alicates, brocas, parafusos e ferragens de
+            qualidade, além de um excelente atendimento personalizado.
+          </p>
+          <div class="footer-location">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>Rua João Mutinelli, 772 - Jardim Primavera</span>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <ul class="contact-list">
+            <li>
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+551935854192">(19) 3585-4192</a>
+            </li>
             <li>
               <ion-icon name="mail-outline"></ion-icon>
               <a href="mailto:contato@casadosparafusospf.com.br"
@@ -200,15 +391,32 @@
               <a href="https://wa.me/551935854192" target="_blank">WhatsApp</a>
             </li>
           </ul>
-          <span>Seg a Sex: 8h00 às 18h00</span>
+          <div class="business-hours">
+            <ion-icon name="time-outline"></ion-icon>
+            <div>
+              <strong>Horário de Funcionamento</strong>
+              <span>Segunda a Sexta: 8h00 às 18h00</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-legal">
-        © 2025 Casa dos Parafusos, Porto Ferreira-SP | Todos os direitos
-        reservados.
+      <div class="footer-copyright">
+        <p>
+          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os direitos
+          reservados.
+        </p>
       </div>
     </footer>
+
+    <a
+      href="https://wa.me/551935854192"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
 
     <script src="./js/script.js"></script>
   </body>
