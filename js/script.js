@@ -55,7 +55,9 @@ if (menuToggle && navList) {
 /* SCROLL REVEAL - Elementos com classe scroll-reveal */
 /* ============================================ */
 
-const scrollRevealElements = document.querySelectorAll(".scroll-reveal");
+const scrollRevealElements = document.querySelectorAll(
+  ".scroll-reveal, .section-title, .section-badge, .feature-icon, .product-image, .testimonial-card, .hero-content, .footer-content"
+);
 
 const scrollRevealObserverOptions = {
   threshold: 0.15,
@@ -88,7 +90,6 @@ faqToggles.forEach((toggle, index) => {
     const faqItem = faqItems[index];
     const isOpen = faqItem.classList.contains("open");
 
-    
     faqItems.forEach((item) => {
       item.classList.remove("open");
       const toggleBtn = item.querySelector(".faq-toggle");
@@ -97,14 +98,12 @@ faqToggles.forEach((toggle, index) => {
       }
     });
 
-    
     if (!isOpen) {
       faqItem.classList.add("open");
       this.setAttribute("aria-expanded", "true");
     }
   });
 
-  
   const faqQuestion = toggle.closest(".faq-question");
   if (faqQuestion) {
     faqQuestion.addEventListener("click", function () {
