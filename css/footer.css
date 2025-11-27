@@ -67,6 +67,7 @@ footer::before {
 @media (min-width: 769px) {
   .social-links {
     margin-left: 3rem;
+    justify-content: normal;
   }
 }
 
