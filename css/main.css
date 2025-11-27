@@ -4,6 +4,7 @@
 @import url("./contact.css");
 @import url("./mobile.css");
 @import url("./about-us.css");
+@import url("./products.css");
 
 * {
   box-sizing: border-box;
@@ -18,6 +19,7 @@
   --cor-laranja: #df7928;
   --cor-branca: #f0f0f0;
   --radius: 1rem;
+  --section-vertical: 4.5rem;
 }
 
 html {
