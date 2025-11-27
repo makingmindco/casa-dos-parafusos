@@ -7,38 +7,66 @@ header {
   position: fixed;
   width: 100%;
   z-index: 999;
-  transition: height 0.3s cubic-bezier(0.7, 0.3, 0.3, 1);
+  transition: height 0.3s cubic-bezier(0.7, 0.3, 0.3, 1),
+    background-color 0.3s ease;
 }
 
 header.shrink {
   height: 3rem;
   background-color: var(--cor-preta);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-logo {
+.brand-logo {
   width: 200px;
   transition: width 0.3s cubic-bezier(0.7, 0.3, 0.3, 1);
 }
 
-header.shrink .header-logo {
+header.shrink .brand-logo {
   width: 120px;
 }
 
-.ul-menu {
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
   display: flex;
   list-style: none;
+  gap: 0.5rem;
 }
 
-.li-menu a {
+.nav-item a {
   color: var(--cor-branca);
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 10px 16px;
   display: block;
-  transition: 0.5s ease;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  font-weight: 500;
+  position: relative;
 }
 
-.li-menu a:hover {
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--cor-laranja);
+  transition: width 0.3s ease;
+}
+
+.nav-item a:hover {
   color: var(--cor-laranja);
+  background: rgba(223, 121, 40, 0.1);
+}
+
+.nav-item a:hover::after {
+  width: calc(100% - 32px);
 }
 
 .menu-toggle {
@@ -80,8 +108,4 @@ h1 {
   text-align: center;
   margin: 20px 0;
   color: #333;
-}
-
-.header-logo {
-  width: 200px;
 }
