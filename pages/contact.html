@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"
+    ></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo-casa-dos-parafusos.ico"
+      type="image/x-icon"
+    />
+    <title>Casa dos Parafusos - Fale Conosco</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../assets/img/logo-casa-dos-parafusos.png"
+        alt="Casa dos Parafusos - Logo"
+        class="brand-logo"
+      />
+
+      <nav class="main-nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="../index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">Sobre nós</a></li>
+          <li class="nav-item"><a href="products.html">Produtos</a></li>
+          <li class="nav-item"><a href="contact.html">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact-hero">
+        <div class="contact-hero-overlay"></div>
+        <div class="contact-hero-container">
+          <h1>Fale Conosco!</h1>
+          <p>Estamos aqui para ajudar com suas dúvidas e orçamentos</p>
+        </div>
+        <div class="hero-decoration"></div>
+      </div>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="section-title">Entre em Contato</h2>
+              
+              <div class="info-card">
+                <ion-icon name="call-outline"></ion-icon>
+                <div>
+                  <h3>Telefone</h3>
+                  <a href="tel:+551935854192">(19) 3585-4192</a>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <ion-icon name="mail-outline"></ion-icon>
+                <div>
+                  <h3>E-mail</h3>
+                  <a href="mailto:contato@casadosparafusospf.com.br">contato@casadosparafusospf.com.br</a>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <a href="https://wa.me/551935854192" target="_blank">Conversar no WhatsApp</a>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <ion-icon name="location-outline"></ion-icon>
+                <div>
+                  <h3>Localização</h3>
+                  <p>Rua João Mutinelli, 772<br>Jardim Primavera, Porto Ferreira - SP</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <ion-icon name="time-outline"></ion-icon>
+                <div>
+                  <h3>Horário de Funcionamento</h3>
+                  <p>Segunda a Sexta: 8h00 às 18h00<br>Sábado: 8h00 às 12h00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+              <h2 class="section-title">Envie uma Mensagem</h2>
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nome completo *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-mail *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Telefone</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Assunto *</label>
+                  <input type="text" id="subject" name="subject" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Mensagem *</label>
+                  <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+                <p class="form-response" id="formResponse"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="container">
+          <h2 class="section-title">Nossa Localização</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.2089305814977!2d-47.487186!3d-22.275633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8c6c6c6c6c6c7%3A0x9b9b9b9b9b9b9b9b!2sRua%20Jo%C3%A3o%20Mutinelli%2C%20772%20-%20Jardim%20Primavera%2C%20Porto%20Ferreira%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v"
+              width="100%"
+              height="400"
+              style="border: 0; border-radius: 1rem"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img
+            src="../assets/img/logo-casa-dos-parafusos.png"
+            alt="Casa dos Parafusos - Logo"
+          />
+          <p class="footer-tagline">
+            Mais de 20 anos oferecendo qualidade e confiança em Porto Ferreira
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/casadosparafusospf/"
+              target="_blank"
+              aria-label="Facebook"
+              class="social-link"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/casaparafusos03/"
+              target="_blank"
+              aria-label="Instagram"
+              class="social-link"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <h3>Nossa Loja</h3>
+          <p>
+            Situada na Rua João Mutinelli, 772, Jardim Primavera em Porto
+            Ferreira - SP, a Casa dos Parafusos é aquela loja onde você sempre
+            encontra o que precisa: alicates, brocas, parafusos e ferragens de
+            qualidade, além de um excelente atendimento personalizado.
+          </p>
+          <div class="footer-location">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>Rua João Mutinelli, 772 - Jardim Primavera</span>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contato</h3>
+          <ul class="contact-list">
+            <li>
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+551935854192">(19) 3585-4192</a>
+            </li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:contato@casadosparafusospf.com.br"
+                >contato@casadosparafusospf.com.br</a
+              >
+            </li>
+            <li>
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <a href="https://wa.me/551935854192" target="_blank">WhatsApp</a>
+            </li>
+          </ul>
+          <div class="business-hours">
+            <ion-icon name="time-outline"></ion-icon>
+            <div>
+              <strong>Horário de Funcionamento</strong>
+              <span>Segunda a Sexta: 8h00 às 18h00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>
+          © 2025 Ponciano Parafusos Ltda - CNPJ: 05.836.352/0001-03 | Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/contact-form.js"></script>
+  </body>
+</html>
